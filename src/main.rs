@@ -16,7 +16,7 @@ fn main() {
     let private_key = std::fs::read_to_string(private_key_path).unwrap();
 
     // Authenticate with the remote SSH server using the private key
-    sess.userauth_pubkey_memory("wesleylewis", None, &private_key, None)
+    sess.userauth_pubkey_memory("username", None, &private_key, None)
         .unwrap();
 
     // Open a channel to execute commands on the remote host
